@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\livin\\OneDrive\\Documents\\GitHub\\HoltzmanShield\\client\\HoltzmanShield\\ArmBandCore.csproj": {}
+    "C:\\Users\\livin\\OneDrive\\Documents\\GitHub\\ArmbandCore\\project\\ArmBandCore\\ArmBandCore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\livin\\OneDrive\\Documents\\GitHub\\HoltzmanShield\\client\\HoltzmanShield\\ArmBandCore.csproj": {
+    "C:\\Users\\livin\\OneDrive\\Documents\\GitHub\\ArmbandCore\\project\\ArmBandCore\\ArmBandCore.csproj": {
       "version": "321.0.1",
       "restore": {
-        "projectUniqueName": "C:\\Users\\livin\\OneDrive\\Documents\\GitHub\\HoltzmanShield\\client\\HoltzmanShield\\ArmBandCore.csproj",
+        "projectUniqueName": "C:\\Users\\livin\\OneDrive\\Documents\\GitHub\\ArmbandCore\\project\\ArmBandCore\\ArmBandCore.csproj",
         "projectName": "ArmBandCore",
-        "projectPath": "C:\\Users\\livin\\OneDrive\\Documents\\GitHub\\HoltzmanShield\\client\\HoltzmanShield\\ArmBandCore.csproj",
+        "projectPath": "C:\\Users\\livin\\OneDrive\\Documents\\GitHub\\ArmbandCore\\project\\ArmBandCore\\ArmBandCore.csproj",
         "packagesPath": "C:\\Users\\livin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\livin\\OneDrive\\Documents\\GitHub\\HoltzmanShield\\client\\HoltzmanShield\\obj\\",
+        "outputPath": "C:\\Users\\livin\\OneDrive\\Documents\\GitHub\\ArmbandCore\\project\\ArmBandCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
