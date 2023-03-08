@@ -5,29 +5,29 @@
     <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
     <DelaySign>False</DelaySign>
-	<Version>350.0.1</Version>
+	<Version>351.0.1</Version>
 	<AssemblyName>ArmBandCore</AssemblyName>
 	<Authors>jbs4bmx)</Authors>
   </PropertyGroup>
 
   <ItemGroup>
     <Reference Include="Aki.Common">
-      <HintPath>F:\SPT350\EscapeFromTarkov_Data\Managed\Aki.Common.dll</HintPath>
+      <HintPath>D:\SPTesting\EscapeFromTarkov_Data\Managed\Aki.Common.dll</HintPath>
     </Reference>
     <Reference Include="Aki.Reflection">
-      <HintPath>F:\SPT350\EscapeFromTarkov_Data\Managed\Aki.Reflection.dll</HintPath>
+      <HintPath>D:\SPTesting\EscapeFromTarkov_Data\Managed\Aki.Reflection.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>F:\SPT350\EscapeFromTarkov_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>D:\SPTesting\EscapeFromTarkov_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="BepInEx">
-      <HintPath>F:\SPT350\BepInEx\core\BepInEx.dll</HintPath>
+      <HintPath>D:\SPTesting\BepInEx\core\BepInEx.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>F:\SPT350\EscapeFromTarkov_Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>D:\SPTesting\EscapeFromTarkov_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>F:\SPT350\EscapeFromTarkov_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>D:\SPTesting\EscapeFromTarkov_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
   </ItemGroup>
 
