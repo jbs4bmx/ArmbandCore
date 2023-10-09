@@ -1,27 +1,25 @@
 ﻿using BepInEx;
 using EFT.InventoryLogic;
-using Aki.Reflection;
-using Aki.Reflection.Patching;
 using System.Reflection;
 
 namespace Core
 {
-    [BepInPlugin("com.jbs4bmx.ArmBandCore", "ArmBandCore", "351.0.1")]
+    [BepInPlugin("com.jbs4bmx.ArmBandCore", "ArmBandCore", "370.0.1")]
     public class Core : BaseUnityPlugin
     {
         private void Main()
         {
             // Plugin startup logic
-            Logger.LogInfo("ArmBandCore v351.0.1 is loading...");
+            Logger.LogInfo("ArmBandCore v370.0.1 is loading...");
             AddArmBandArmorSlot();
-            Logger.LogInfo("ArmBandCore v351.0.1 has loaded!");
+            Logger.LogInfo("ArmBandCore v370.0.1 has loaded!");
         }
 
         // Patch
         public void AddArmBandArmorSlot()
         {
             var bindingFlags = BindingFlags.Instance | BindingFlags.Static | BindingFlags.NonPublic | BindingFlags.Public;
-            var field = typeof(InventoryClass).GetField("ArmorSlots", bindingFlags);
+            var field = typeof(Inventory).GetField("ArmorSlots", bindingFlags);
 
             field.SetValue(null, new EquipmentSlot[]
             {
