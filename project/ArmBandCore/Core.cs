@@ -4,15 +4,15 @@ using System.Reflection;
 
 namespace Core
 {
-    [BepInPlugin("com.jbs4bmx.ArmBandCore", "ArmBandCore", "370.0.1")]
+    [BepInPlugin("com.jbs4bmx.ArmBandCore", "ArmBandCore", "380.0.1")]
     public class Core : BaseUnityPlugin
     {
         private void Main()
         {
             // Plugin startup logic
-            Logger.LogInfo("ArmBandCore v370.0.1 is loading...");
+            Logger.LogInfo("ArmBandCore v380.0.1 is loading...");
             AddArmBandArmorSlot();
-            Logger.LogInfo("ArmBandCore v370.0.1 has loaded!");
+            Logger.LogInfo("ArmBandCore v380.0.1 has loaded!");
         }
 
         // Patch

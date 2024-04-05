@@ -5,29 +5,32 @@
     <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
     <DelaySign>False</DelaySign>
-	<Version>351.0.1</Version>
+	<Version>380.0.1</Version>
 	<AssemblyName>ArmBandCore</AssemblyName>
-	<Authors>jbs4bmx)</Authors>
+	<Authors>jbs4bmx</Authors>
+	<Title></Title>
+	<Description>Allows the armband slot to function as an armor slot.</Description>
+	<NeutralLanguage>en</NeutralLanguage>
   </PropertyGroup>
 
   <ItemGroup>
     <Reference Include="Aki.Common">
-      <HintPath>D:\SPTesting\EscapeFromTarkov_Data\Managed\Aki.Common.dll</HintPath>
+      <HintPath>..\Shared\Managed\Aki.Common.dll</HintPath>
     </Reference>
     <Reference Include="Aki.Reflection">
-      <HintPath>D:\SPTesting\EscapeFromTarkov_Data\Managed\Aki.Reflection.dll</HintPath>
+      <HintPath>..\Shared\Managed\Aki.Reflection.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>D:\SPTesting\EscapeFromTarkov_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\Shared\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="BepInEx">
-      <HintPath>D:\SPTesting\BepInEx\core\BepInEx.dll</HintPath>
+      <HintPath>..\Shared\BepInEx\core\BepInEx.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>D:\SPTesting\EscapeFromTarkov_Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>..\Shared\Managed\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>D:\SPTesting\EscapeFromTarkov_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>..\Shared\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
   </ItemGroup>
 

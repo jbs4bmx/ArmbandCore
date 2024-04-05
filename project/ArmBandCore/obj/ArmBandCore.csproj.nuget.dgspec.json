@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\livin\\OneDrive\\Documents\\GitHub\\ArmbandCore\\project\\ArmBandCore\\ArmBandCore.csproj": {}
+    "C:\\Users\\livin\\source\\repos\\ArmbandCore\\ArmBandCore\\ArmBandCore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\livin\\OneDrive\\Documents\\GitHub\\ArmbandCore\\project\\ArmBandCore\\ArmBandCore.csproj": {
-      "version": "351.0.1",
+    "C:\\Users\\livin\\source\\repos\\ArmbandCore\\ArmBandCore\\ArmBandCore.csproj": {
+      "version": "380.0.1",
       "restore": {
-        "projectUniqueName": "C:\\Users\\livin\\OneDrive\\Documents\\GitHub\\ArmbandCore\\project\\ArmBandCore\\ArmBandCore.csproj",
+        "projectUniqueName": "C:\\Users\\livin\\source\\repos\\ArmbandCore\\ArmBandCore\\ArmBandCore.csproj",
         "projectName": "ArmBandCore",
-        "projectPath": "C:\\Users\\livin\\OneDrive\\Documents\\GitHub\\ArmbandCore\\project\\ArmBandCore\\ArmBandCore.csproj",
+        "projectPath": "C:\\Users\\livin\\source\\repos\\ArmbandCore\\ArmBandCore\\ArmBandCore.csproj",
         "packagesPath": "C:\\Users\\livin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\livin\\OneDrive\\Documents\\GitHub\\ArmbandCore\\project\\ArmBandCore\\obj\\",
+        "outputPath": "C:\\Users\\livin\\source\\repos\\ArmbandCore\\ArmBandCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -43,7 +43,7 @@
       "frameworks": {
         "net472": {
           "targetAlias": "net472",
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
