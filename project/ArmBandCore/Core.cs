@@ -1,18 +1,31 @@
 ﻿using BepInEx;
+using BepInEx.Configuration;
+using System;
+using UnityEngine;
 using EFT.InventoryLogic;
 using System.Reflection;
+using ArmBandCore.Utilities;
+using static ArmBandCore.Utilities.VersionChecker;
 
-namespace Core
+namespace ABCore
 {
-    [BepInPlugin("com.jbs4bmx.ArmBandCore", "ArmBandCore", "380.0.1")]
+    [BepInPlugin("com.jbs4bmx.ArmBandCore", "ArmBandCore", "390.0.1")]
     public class Core : BaseUnityPlugin
     {
+        public const int TarkovVersion = 30626;
+
         private void Main()
         {
+            // Verify EFT version is correct.
+            if (!VersionChecker.CheckEftVersion(Logger, Info, Config))
+            {
+                throw new Exception("Invalid EFT Version");
+            }
+
             // Plugin startup logic
-            Logger.LogInfo("ArmBandCore v380.0.1 is loading...");
+            Logger.LogInfo("ArmBandCore v390.0.1 is loading...");
             AddArmBandArmorSlot();
-            Logger.LogInfo("ArmBandCore v380.0.1 has loaded!");
+            Logger.LogInfo("ArmBandCore v390.0.1 has loaded!");
         }
 
         // Patch

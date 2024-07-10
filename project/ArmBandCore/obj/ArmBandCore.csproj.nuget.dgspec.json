@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\Users\\livin\\source\\repos\\ArmbandCore\\ArmBandCore\\ArmBandCore.csproj": {
-      "version": "380.0.1",
+      "version": "390.0.1",
       "restore": {
         "projectUniqueName": "C:\\Users\\livin\\source\\repos\\ArmbandCore\\ArmBandCore\\ArmBandCore.csproj",
         "projectName": "ArmBandCore",
@@ -38,12 +38,17 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net472": {
           "targetAlias": "net472",
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
