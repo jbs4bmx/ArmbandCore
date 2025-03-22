@@ -6,7 +6,7 @@ using System;
 using System.Diagnostics;
 using UnityEngine;
 
-namespace ArmBandCore.Utilities
+namespace ABCore.Utilities
 {
     [AttributeUsage(AttributeTargets.Assembly, AllowMultiple = false)]
     public class VersionChecker : Attribute

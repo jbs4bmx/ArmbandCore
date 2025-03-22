@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net471</TargetFramework>
+    <TargetFramework>net472</TargetFramework>
     <SignAssembly>True</SignAssembly>
-    <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>Utilities\Key.snk</AssemblyOriginatorKeyFile>
     <DelaySign>False</DelaySign>
 	<Version>390.0.1</Version>
 	<AssemblyName>ArmBandCore</AssemblyName>
