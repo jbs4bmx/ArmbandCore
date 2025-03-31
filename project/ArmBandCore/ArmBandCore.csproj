@@ -5,7 +5,7 @@
     <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>Utilities\Key.snk</AssemblyOriginatorKeyFile>
     <DelaySign>False</DelaySign>
-	<Version>311.1.1</Version>
+	<Version>311.2.1</Version>
 	<AssemblyName>ArmBandCore</AssemblyName>
 	<Authors>jbs4bmx</Authors>
 	<Title></Title>
