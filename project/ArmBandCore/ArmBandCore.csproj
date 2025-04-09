@@ -5,12 +5,13 @@
     <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>Utilities\Key.snk</AssemblyOriginatorKeyFile>
     <DelaySign>False</DelaySign>
-	<Version>311.2.1</Version>
+	<Version>311.3.1</Version>
 	<AssemblyName>ArmBandCore</AssemblyName>
 	<Authors>jbs4bmx</Authors>
 	<Title></Title>
-	<Description>Allows the armband slot to function as an armor slot.</Description>
+	<Description></Description>
 	<NeutralLanguage>en</NeutralLanguage>
+	<Copyright>Copyright © 2025</Copyright>
   </PropertyGroup>
 
   <ItemGroup>

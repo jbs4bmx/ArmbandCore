@@ -8,8 +8,8 @@ using static ArmBandCore.Utilities.VersionChecker;
 
 namespace ArmBandCore
 {
-    [BepInPlugin("com.jbs4bmx.ArmBandCore", "ArmBandCore", "311.2.1")]
-    [BepInDependency("com.SPT.core", "3.11.2")]
+    [BepInPlugin("com.jbs4bmx.ArmBandCore", "ArmBandCore", "311.3.1")]
+    [BepInDependency("com.SPT.core", "3.11.0")]
     public class Core : BaseUnityPlugin
     {
         public const int TarkovVersion = 35392;
