@@ -1,0 +1,12 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="ArmBandCore/ArmBandCore.csproj" Id="8e5fee84-1809-4f44-b09f-cfb431930724">
+    <Platform Solution="*|x64" Project="x64" />
+    <Platform Solution="*|x86" Project="x86" />
+    <Build Solution="Debug|x86" Project="false" />
+  </Project>
+</Solution>

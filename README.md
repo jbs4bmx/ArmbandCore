@@ -5,7 +5,6 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 
-<!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/jbs4bmx/ArmbandCore">
@@ -14,148 +13,191 @@
 
   <h3 align="center">Armband Core</h3>
 
-  <p align="center">Core component needed for armband to function as armor equipment.<br /></p>
+  <p align="center">
+    Core framework enabling the Armband slot to function as an armor slot, with optional advanced armor behavior systems.
+  </p>
 
   [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/X8X611JH15)
 </div>
 
+---
 
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisitesforbuilding">Prerequisites for Building</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#configuration">Configuration</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
-
-
-
-<!-- ABOUT THE PROJECT -->
 ## About The Project
-Type: Client Mod</br>
-Disclaimer: **This mod is provided _as-is_ with _no guarantee_ of support.**
+**Type:** Client Mod</br>
+**Disclaimer:** _Provided as-is with no guarantee of support._
 
-This alters the armband slot ["EquipmentSlot ArmorSlot" method] in the EFT client to allow armbands to function as armor. Without this, armbands can have the properties of armor, but will not provide the protection.
+ArmbandCore modifies the EFT client to allow the **Armband** equipment slot to function as a true armor slot.
+This enables modders and players to create armbands with real armor properties that behave consistently with the rest of the armor system.
 
-You can give armbands armor properties, include this mod as a pre-requisite installation, and shield yourself without taking up inventory space or adding additional weight to your PMC.
+As of version **4.0.1**:
+  - ArmbandCore's versioning is structured to match the versioning scheme of SPT to allow for the quick identification of compatible mod versions with SPT.
+  - ArmbandCore also includes an optional suite of **experimental armor behavior systems**, including:
+    - Multi-layer armor damage distribution
+    - Explosive damage redirection
+    - Throughput suppression
+    - Blunt damage suppression
+    - Fragmentation damage suppression
+    - Armband‑specific armor logic
+    - Debugging tools for armor and hit tracing
 
-This mod can be used by anyone that wants to include altered armbands in their mod/modpack; just specify this mod as a dependency. You don't need to maintain additional code as I'll do it for you with this mod.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-### Built With
-| Frameworks/Libraries                                      | Name         | Link                                       |
-| :-------------------------------------------------------: | :----------: | :----------------------------------------: |
-| <img src="./images/icons/CS.svg" width="48">              | `C Sharp`    | [C# Documentation][CSharp-url]             |
-
-|                         IDEs                                |      Name       | Link                                      |
-| :---------------------------------------------------------: | :-------------: | :---------------------------------------: |
-| <img src="./images/icons/VisualStudio-Dark.svg" width="48"> | `Visual Studio` | [Visual Studio Website][VisualStudio-url] |
+If your mod adds custom armbands with armor stats, simply list ArmbandCore as a dependency and the framework will handle the rest.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+---
+
+## Features
+
+### ✔ Core Functionality
+- Converts the **Armband** slot into a valid armor slot.
+- Ensures armband armor participates in EFT’s armor pipeline.
+- Fully client-side; no server mod required.
+
+### ✔ Debug Tools
+- Armor inspector (WIP)
+- Hit tracing (WIP)
+
+### ✔ Experimental Armor Systems (Optional)
+- **Multi-Layer Armor Resolution**
+  Distributes ballistic armor damage across all worn armor pieces.
+
+- **Explosive Armor Protection**
+  Redirects explosive damage to armor instead of the player.
+
+- **Armband-Only Explosive Targeting**
+  Forces all explosive damage to hit the armband armor.
+
+- **Throughput Damage Suppression**
+  Blocks ballistic/explosive leak-through damage.
+
+- **Blunt Damage Suppression**
+  Blocks blunt trauma damage.
+
+- **Fragmentation Damage Suppression**
+  Blocks grenade fragmentation damage.
 
 
-<!-- GETTING STARTED -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+---
+
+## Built With
+
+| Category | Name | Link |
+| :------: | :--: | :--: |
+| <img src="./images/icons/CS.svg" width="48"> | C# | [C# Documentation][CSharp-url] |
+| <img src="./images/icons/VisualStudio-Dark.svg" width="48"> | Visual Studio | [Visual Studio Website][VisualStudio-url] |
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+---
+
 ## Getting Started
-_For the purpose of these directions, "[SPT]" represents your SPT folder path._
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+_For the purpose of these directions, “[SPT]” refers to your SPT installation directory._
 
 ### Prerequisites for Building
-  1. Visual Studio or another compiler of your choosing.
-  2. The following assembly files need to be referenced within the project:
-     - Assembly-CSharp.dll - Find in "[SPT]\EscapeFromTarkov_Data\Managed".
-     - spt-common.dll - Part of the SPT modules for the launcher. Find in "[SPT]\BepInEx\plugins\spt".
-     - BepInEx.dll - Part of the BepInEx Harmony Patcher. Find in "[SPT]\BepInEx\core"
+You will need:
+1. Visual Studio (or another C# compiler)
+2. The following referenced assemblies:
+   - `Assembly-CSharp.dll` - Found in:`[SPT]\EscapeFromTarkov_Data\Managed\Assembly-CSharp.dll`
+   - `0Harmony.dll` - Found in:`[SPT]\BepInEx\core\0Harmony.dll`
+   - `BepInEx.dll` - Found in:`[SPT]\BepInEx\core\BepInEx.dll`
+   - `ItemComponent.Types.dll` - Found in:`[SPT]\EscapeFromTarkov_Data\Managed\ItemComponent.Types.dll`
+   - `spt-common.dll` - Found in:`[SPT]\BepInEx\plugins\spt\spt-common.dll`
+   - `spt-core.dll` - Found in:`[SPT]\BepInEx\plugins\spt\spt-core.dll`
+   - `UnityEngine.dll` - Found in:`[SPT]\EscapeFromTarkov_Data\Managed\UnityEngine.dll`
+   - `UnityEngine.CoreModule.dll` - Found in:`[SPT]\EscapeFromTarkov_Data\Managed\UnityEngine.CoreModule.dll`
+   - `UnityEngine.IMGUIModule.dll` - Found in:`[SPT]\EscapeFromTarkov_Data\Managed\UnityEngine.IMGUIModule.dll`
+   - `UnityEngine.InputLegacyModule.dll` - Found in:`[SPT]\EscapeFromTarkov_Data\Managed\UnityEngine.InputLegacyModule.dll`
+   - `UnityEngine.TextRenderingModule.dll` - Found in:`[SPT]\EscapeFromTarkov_Data\Managed\UnityEngine.TextRenderingModule.dll`
+3. For full compatibility with EFT systems, you may be required to modify your `.csproj` file so that it references `Assembly-CSharp.dll` before all other referenced assemblies. The order that they show up as in the IDE doesn't matter as much, but the order in the project file is important.
 
 ### Installation
-Extract the contents of the zip file into the root of your [SPT] folder.
-  - That's the same location as "SPT.Server.exe" and "SPT.Launcher.exe".
+Extract the mod into the root of your `[SPT]` folder (the same directory as `EscapeFromTarkov.exe`).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+---
 
-
-<!-- CONFIGURATION EXAMPLES -->
 ## Configuration
-There are no configuration options for this mod.
+
+ArmbandCore includes several optional experimental systems.</br>
+These can be toggled in the F12 BepInEx configuration menu:
+
+### **Debug Options**
+- `Enable Armor Inspector (WIP)`
+- `Enable Hit Tracing (WIP)`</br>
+These options are a work in progress. They are meant to show debugging information in the logs to aid in development of this or related mods.
+
+### **Experimental Options (All Armor)**
+- `Enable Multi-Layer Armor Damage Resolution`</br>
+This allows you to wear multiple types of armor along with armband armor and have them work together. Previous versions of ABC did not permit the use of armband armor while wearing other types of armor.
+
+### **Experimental Options (Armband Armor Only)**
+- `Enable Protection From Explosives`
+- `Redirect All Explosive Damage to Armband Armor`
+- `Disable Throughput Damage`
+- `Disable Blunt Damage`
+- `Disable Fragmentation Damage`</br>
+These options are all relevant only to armor placed/worn in the armband slot. All other armor types will be ignored. Explosions and Ballistics in EFT have multiple components to them - These options should cover that range of components.</br>
+To enable a sudo "God mode", enable all of these options at the same time and use an armband armor mod such as [Holtzman Shield](https://github.com/jbs4bmx/HoltzmanShield).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+---
 
-
-<!-- ROADMAP -->
 ## Roadmap
 
-- [X] Implement armband slot as equipment slot armor slot.
+- [✅] Armband slot armor integration.
+- [❓] Multi-layer armor system (WIP).
+- [❓] Debug logging (WIP).
+- [✅] Explosive redirection.
+- [✅] Throughput/blunt/fragmentation suppression via configuration options.
 
-Suggest changes or view/report issues [here](https://github.com/jbs4bmx/ArmbandCore/issues).
+Suggest changes or report issues [here](https://github.com/jbs4bmx/ArmbandCore/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+---
 
-
-<!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are welcome and appreciated.
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push the branch
+5. Open a pull request
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+If you’d like to support development, you can also buy me a coffee:
 
-You can also buy me a coffee! (This is not required, but I greatly appreciate any support provided.)</br>
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/X8X611JH15)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+---
 
-
-<!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License.</br>
+See `LICENSE` or `LICENSE.txt` for details.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+---
 
-
-<!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-None yet.
+  - SPT team
+  - EFT modding community
+  - Contributors and testers
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+---
 
-
-<!-- Repository Metrics -->
 [contributors-shield]: https://img.shields.io/github/contributors/jbs4bmx/ArmbandCore.svg?style=for-the-badge
 [contributors-url]: https://github.com/jbs4bmx/ArmbandCore/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/jbs4bmx/ArmbandCore.svg?style=for-the-badge
@@ -167,6 +209,5 @@ None yet.
 [license-shield]: https://img.shields.io/github/license/jbs4bmx/ArmbandCore.svg?style=for-the-badge
 [license-url]: https://github.com/jbs4bmx/ArmbandCore/blob/master/LICENSE.txt
 
-<!-- Framwork/Library URLs -->
 [CSharp-url]: https://learn.microsoft.com/en-us/dotnet/csharp/
 [VisualStudio-url]: https://visualstudio.microsoft.com/

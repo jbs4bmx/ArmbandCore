@@ -6,7 +6,7 @@ using System;
 using System.Diagnostics;
 using UnityEngine;
 
-namespace ArmBandCore.Utilities
+namespace ArmBandCore.Helpers
 {
     [AttributeUsage(AttributeTargets.Assembly, AllowMultiple = false)]
     public class VersionChecker : Attribute
@@ -24,10 +24,10 @@ namespace ArmBandCore.Utilities
         public static bool CheckEftVersion(ManualLogSource Logger, PluginInfo Info, ConfigFile Config = null)
         {
             int currentVersion = FileVersionInfo.GetVersionInfo(BepInEx.Paths.ExecutablePath).FilePrivatePart;
-            int buildVersion = Core.TarkovVersion;
+            int buildVersion = ArmBandCore.ABCPlugin.TarkovVersion;
             if (currentVersion != buildVersion)
             {
-                string errorMessage = $"ERROR: This version of ArmbandCore was built for Tarkov {buildVersion}, but you are running {currentVersion}. Please download the correct plugin version.";
+                string errorMessage = $"ERROR: This version of MedicalAttention Client mod was built for Tarkov {buildVersion}, but you are running {currentVersion}. Please download the correct plugin version.";
                 Logger.LogError(errorMessage);
                 Chainloader.DependencyErrors.Add(errorMessage);
 
@@ -78,9 +78,9 @@ namespace ArmBandCore.Utilities
         internal sealed class ConfigurationManagerAttributes
         {
             public bool? ShowRangeAsPercent;
-            public Action<ConfigEntryBase> CustomDrawer;
+            public System.Action<BepInEx.Configuration.ConfigEntryBase> CustomDrawer;
             public CustomHotkeyDrawerFunc CustomHotkeyDrawer;
-            public delegate void CustomHotkeyDrawerFunc(ConfigEntryBase setting, ref bool isCurrentlyAcceptingInput);
+            public delegate void CustomHotkeyDrawerFunc(BepInEx.Configuration.ConfigEntryBase setting, ref bool isCurrentlyAcceptingInput);
             public bool? Browsable;
             public string Category;
             public object DefaultValue;
@@ -91,8 +91,8 @@ namespace ArmBandCore.Utilities
             public int? Order;
             public bool? ReadOnly;
             public bool? IsAdvanced;
-            public Func<object, string> ObjToStr;
-            public Func<string, object> StrToObj;
+            public System.Func<object, string> ObjToStr;
+            public System.Func<string, object> StrToObj;
         }
     }
 }
